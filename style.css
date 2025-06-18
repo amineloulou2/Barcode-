@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.label {
+  border: 1px solid #000;
+  margin: 15px auto;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  page-break-inside: avoid;
+}
+.store-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+.barcode-container {
+  margin: 5px 0;
+}
+.barcode-number {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 18px;
+}
+select, input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+.print-btn {
+  width: 100%;
+  padding: 15px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+.print-btn:hover {
+  background: #27ae60;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printPreview, #printPreview * {
+    visibility: visible;
+  }
+  #printPreview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
